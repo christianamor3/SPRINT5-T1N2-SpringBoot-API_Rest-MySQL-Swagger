@@ -61,7 +61,12 @@ public class FlorController {
     @GetMapping("/getAll")
     public ResponseEntity<List<FlorEntityDTO>> getAllFlor(){
         List<FlorEntityDTO> flores = service.findAll();
-        return ResponseEntity.ok(flores);
+
+        if (flores.isEmpty()){
+            return ResponseEntity.notFound().build();
+        else {
+            return ResponseEntity.ok(flores);
+        }
     }
 
 }
