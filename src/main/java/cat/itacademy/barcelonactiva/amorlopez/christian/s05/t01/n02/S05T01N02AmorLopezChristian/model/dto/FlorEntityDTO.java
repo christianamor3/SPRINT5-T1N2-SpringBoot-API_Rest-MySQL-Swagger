@@ -79,7 +79,6 @@ public class FlorEntityDTO {
     public static FlorEntity toEntity(FlorEntityDTO florDTO){
         FlorEntity florEntity = new FlorEntity();
 
-        florEntity.setPk_FlorID(florDTO.getPk_FlorID());
         florEntity.setNomFlor(florDTO.getNomFlor());
         florEntity.setPaisFlor(florDTO.getPaisFlor());
         
