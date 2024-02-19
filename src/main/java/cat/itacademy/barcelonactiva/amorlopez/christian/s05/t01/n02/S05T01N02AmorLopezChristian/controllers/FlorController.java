@@ -64,7 +64,7 @@ public class FlorController {
 
         if (flores.isEmpty()){
             return ResponseEntity.notFound().build();
-        else {
+        } else {
             return ResponseEntity.ok(flores);
         }
     }
